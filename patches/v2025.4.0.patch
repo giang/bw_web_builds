@@ -346,9 +346,7 @@ index d19af54f5d..03c8edf631 100644
    <div bitTypography="body2">{{ version }}</div>
 +  <br />
 +  <div bitTypography="helper" id="vw-disclaimer">
-+    A modified version of the Bitwarden&reg; Web Vault for Vaultwarden (an unofficial rewrite of the
-+    Bitwarden&reg; server).<br />
-+    Vaultwarden is not associated with the Bitwarden&reg; project nor Bitwarden Inc.
++        SSL Vault - A modified version of the Bitwarden&reg; Web Vault for Vaultwarden (an unofficial rewrite of the Bitwarden&reg; server).<br />
 +  </div>
  </footer>
 diff --git a/apps/web/src/app/layouts/header/web-header.component.html b/apps/web/src/app/layouts/header/web-header.component.html
@@ -667,9 +665,7 @@ index f31a5500b4..992bb2ec20 100644
        <div bitTypography="body2">{{ version }}</div>
 +      <br />
 +      <div bitTypography="helper" id="vw-disclaimer">
-+        A modified version of the Bitwarden&reg; Web Vault for Vaultwarden (an unofficial rewrite of
-+        the Bitwarden&reg; server).<br />
-+        Vaultwarden is not associated with the Bitwarden&reg; project nor Bitwarden Inc.
++        SSL Vault - A modified version of the Bitwarden&reg; Web Vault for Vaultwarden (an unofficial rewrite of the Bitwarden&reg; server).<br />
 +      </div>
      </ng-container>
    </footer>
