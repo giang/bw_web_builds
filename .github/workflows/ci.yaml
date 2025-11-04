@@ -40,3 +40,8 @@ jobs:
           name: web-vault
           compression-level: 0
           path: container_builds/bw_web_vault.tar.gz
+
+      - name: Release
+        shell: bash
+        run: |
+          sudo bash ../../scripts/gh_release.sh
