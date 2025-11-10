@@ -52,7 +52,7 @@ full: checkout build tar
 .PHONY: full
 
 container:
-	${CONTAINER_CMD} build --network host --add-host=github.com:2a01:7c8:7c8::1337 -t bw_web_vault .
+	${CONTAINER_CMD} build --network host --add-host=github.com:2a01:4f8:c010:d56::2 -t bw_web_vault .
 .PHONY: container
 
 container-extract: container
