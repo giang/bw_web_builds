@@ -52,7 +52,7 @@ full: checkout build tar
 .PHONY: full
 
 container:
-	${CONTAINER_CMD} build --network host -t bw_web_vault .
+	${CONTAINER_CMD} build --dns 2001:4860:4860:0:0:0:0:6464 -t bw_web_vault .
 .PHONY: container
 
 container-extract: container
