@@ -59,7 +59,7 @@ container6:
 	${CONTAINER_CMD} build --network host --add-host github.com:2a01:4f8:c010:d56::2 --add-host codeload.github.com:2a01:4f8:c010:d56::4 -t bw_web_vault .
 .PHONY: container6
 
-container-extract: container6
+container-extract6: container6
 	@${CONTAINER_CMD} rm bw_web_vault_extract 2>/dev/null || true
 	@${CONTAINER_CMD} create --name bw_web_vault_extract bw_web_vault
 	@mkdir -vp container_builds
@@ -67,7 +67,7 @@ container-extract: container6
 	@${CONTAINER_CMD} cp bw_web_vault_extract:/bw_web_vault.tar.gz ./container_builds/bw_web_vault.tar.gz
 	@${CONTAINER_CMD} cp bw_web_vault_extract:/web-vault ./container_builds/web-vault
 	@${CONTAINER_CMD} rm bw_web_vault_extract || true
-.PHONY: container6-extract
+.PHONY: container-extract6
 
 container-extract: container
 	@${CONTAINER_CMD} rm bw_web_vault_extract 2>/dev/null || true
@@ -90,9 +90,9 @@ docker-extract: container-extract
 .PHONY: docker-extract
 
 # Alias for container forcing docker IPv6
-docker-extract: CONTAINER_CMD := docker
-docker-extract: container6-extract
-.PHONY: docker6-extract
+docker-extract6: CONTAINER_CMD := docker
+docker-extract6: container-extract6
+.PHONY: docker-extract6
 
 # Alias for container forcing podman
 podman: CONTAINER_CMD := podman
