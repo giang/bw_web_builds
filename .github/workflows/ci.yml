@@ -6,12 +6,15 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/ci.yml"
-      - "resources/**"
-      - "scripts/**"
-      - "Dockerfile"
+  workflow_dispatch:
+  
+#on:
+  #pull_request:
+    #paths:
+      #- ".github/workflows/ci.yml"
+      #- "resources/**"
+      #- "scripts/**"
+      #- "Dockerfile"
 
 defaults:
   run:
